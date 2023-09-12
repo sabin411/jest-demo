@@ -1,7 +1,16 @@
-export function add(x: number, y: number): number {
+interface AddType {
+  x: number;
+  y: number;
+}
+interface MulType {
+  x: number;
+  y: number;
+}
+
+export function add({ x, y }: AddType) {
   return x + y;
 }
 
-export function mul(x: number, y: number): number {
+export function mul({ x, y }: MulType) {
   return x * y;
 }
